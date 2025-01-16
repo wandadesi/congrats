@@ -1,0 +1,188 @@
+/* General body styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9ece4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Container for the content */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#fff7f0, #f9ece4);
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Background grid */
+.grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, #f5d5c0 1px, transparent 1px),
+    linear-gradient(to bottom, #f5d5c0 1px, transparent 1px);
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  z-index: -1;
+}
+
+/* Sticker container with text and image */
+.sticker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transform: scale(0);
+  animation: zoomIn 1s ease-out 1s forwards;
+}
+
+/* Image styling inside sticker */
+.sticker img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+  animation: catBounce 2s infinite ease-in-out;
+}
+
+/* Sticker text styling */
+.sticker-text {
+  font-size: 1.2em;
+  color: #5e3c23;
+  font-weight: bold;
+  text-align: center;
+}
+.paragraf {
+  font-size: 0.8em;
+  color: #5e3c23;
+  font-weight: bold;
+  text-align: center;
+}
+/* Input field for user answer */
+.input-container {
+  margin-top: 20px;
+}
+
+#answer-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  width: 60%;
+}
+
+/* Error message styling */
+#error-message {
+  display: none;
+  color: red;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+/* Button container for navigation */
+.button-container {
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Button styling for all buttons */
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #ffb347;
+  color: #fff0c7;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #9a4004;
+}
+
+/* Specific button styles for the different buttons */
+#animate-button,
+#next-button,
+#next-button-2,
+#next-button-3 {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #ffb347;
+  color: #fff0c7;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#animate-button:hover,
+#next-button:hover,
+#next-button-2:hover,
+#next-button-3:hover {
+  background-color: #9a4004;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes catBounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Additional Styling for the "next" buttons (optional) */
+#next-button-3 {
+  background-color: #ffb347;
+}
+
+#next-button-3:hover {
+  background-color: #9a4004;
+}
+
